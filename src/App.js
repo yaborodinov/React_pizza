@@ -5,19 +5,27 @@ import {Header, Categories} from "./components"
 
 function App(){
 
+
+
+
+
+
+
+
   return (
     <>
       
-
       <div className="wrapper">
         <Header />        
         <div className="content">
           <div className="container">
             <div className="content__top">
               <Categories
+                
+                onCategoryClick={(item)=>console.log(item)}
                 items={[
                   "Мясные",
-                  "Вегетарианские",
+                  "Веганские",
                   "Гриль",
                   "Острые",
                   "Закрытые",
