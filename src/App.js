@@ -22,7 +22,7 @@ function App(){
             <div className="content__top">
               <Categories
                 
-                onCategoryClick={(item)=>console.log(item)}
+                
                 items={[
                   "Мясные",
                   "Веганские",
