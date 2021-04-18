@@ -4,9 +4,7 @@ import logoSvg from "../assets/img/pizza-logo.svg"
 
 import Button from "./Button"
 
-function clickBtn() {
-  alert("clicked")
-}
+
 
 function Header() {
     return (
@@ -20,7 +18,7 @@ function Header() {
               </div>
             </div>
             <div className="header__cart">
-            <Button clickBtn={clickBtn}
+            <Button 
                btnCart
             />
             </div>
