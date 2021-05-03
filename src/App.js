@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import axios from "axios"
 import { setPizzas  } from "./redux/actions/pizzas"
-import { useSelector, useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 
 import { Header } from "./components";
 import{Cart, Home} from "./pages"
@@ -11,11 +11,7 @@ function App() {
   
   const dispatch = useDispatch();
  
-  const {items} = useSelector(({ pizzas, filter }) => {
-    return {
-      items: pizzas.items,
-    }
-  })
+  
 
   
 
@@ -30,7 +26,7 @@ function App() {
       <div className="wrapper">
         <Header />        
         <div className="content">
-          <Route path="/" render={()=><Home items={items} />} exact/>
+          <Route path="/" component={Home} exact/>
           <Route path="/cart" component={Cart} exact/>
         </div>
       </div>
