@@ -8,12 +8,12 @@ import { Header } from "./components";
 import{Cart, Home} from "./pages"
 
 function App() {
-  
-  const dispatch = useDispatch();
- 
-  
 
-  
+  const dispatch = useDispatch();   
+
+
+
+
 
   React.useEffect(() => {
     axios.get("http://localhost:3000/db.json").then(({ data }) => {
@@ -21,10 +21,10 @@ function App() {
     })
   }, [dispatch])
   return (
-    
-      
+
+
       <div className="wrapper">
-        <Header />        
+        <Header />
         <div className="content">
           <Route path="/" component={Home} exact/>
           <Route path="/cart" component={Cart} exact/>
